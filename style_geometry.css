@@ -1,5 +1,6 @@
 :root {
-  --container: 400px;
+  --place: 700px;
+  --container: 300px;
   --squarre: 200px;
   --blue: 240, 100%, 50%;
   --green: 120, 100%, 50%;
@@ -16,21 +17,51 @@
 body {
   height: 100vh;
 }
+.place {
+  width: var(--place);
+  height: var(--place);
+}
 .container {
   width: var(--container);
   height: var(--container);
+  position: relative;
 }
 .squarre {
   width: var(--squarre);
   height: var(--squarre);
+  position: absolute;
 }
 .blue {
   background: hsl(var(--blue));
+  top: 5px;
+  left: 5px;
+  z-index: 3;
 }
 .red {
   background: hsl(var(--red));
-  color: hsl(120, 100%, 25%);
+  top: 35px;
+  left: 35px;
+  z-index: 2;
 }
 .green {
   background: hsl(var(--green));
+  top: 65px;
+  left: 65px;
+  z-index: 1;
+}
+/*grid*/
+.place {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+/*rotation*/
+.container:nth-child(2) {
+  transform: rotateZ(90deg);
+}
+.container:nth-child(3) {
+  transform: rotateZ(270deg);
+}
+.container:nth-child(4) {
+  transform: rotateZ(180deg);
 }
