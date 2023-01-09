@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form - Vac</title>
+    <link rel="stylesheet" href="./form_style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Questionnaire de colonie de vacances</h1>
+      <form action="" method="get">
+        <label for="name">Votre nom :</label>
+        <input type="text" name="name" id="name" />
+        <label for="town">Voter ville d'origin :</label>
+        <input type="text" name="town" id="town" />
+        <label for="sport">Choisir un sport :</label>
+        <label for="basket">basket</label>
+        <input type="radio" name="sport" id="basket" />
+        <label for="rugby">rugby</label>
+        <input type="radio" name="sport" id="rugby" />
+        <label for="volley">volley</label>
+        <input type="radio" name="sport" id="volley" />
+        <label for="equip">Couleur d'équipe</label>
+        <select name="equip" id="equip">
+          <option value="">-veuillez choisir une option</option>
+          <option value="blue">bleu</option>
+          <option value="red">rouge</option>
+          <option value="yellow">jaune</option>
+          <option value="purple">violet</option>
+          <option value="pink">rose</option>
+        </select>
+      </form>
+    </div>
+  </body>
+</html>
