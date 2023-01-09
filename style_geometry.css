@@ -1,0 +1,36 @@
+:root {
+  --container: 400px;
+  --squarre: 200px;
+  --blue: 240, 100%, 50%;
+  --green: 120, 100%, 50%;
+  --red: 0, 100%, 50%;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* body {
+  background: red;
+} */
+body {
+  height: 100vh;
+}
+.container {
+  width: var(--container);
+  height: var(--container);
+}
+.squarre {
+  width: var(--squarre);
+  height: var(--squarre);
+}
+.blue {
+  background: hsl(var(--blue));
+}
+.red {
+  background: hsl(var(--red));
+  color: hsl(120, 100%, 25%);
+}
+.green {
+  background: hsl(var(--green));
+}
