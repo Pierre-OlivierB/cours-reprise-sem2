@@ -6,13 +6,29 @@
 body {
   height: 100vh;
 }
-nav {
-  height: 100px;
-  color: white;
+input {
+  display: block;
+  position: absolute;
+  opacity: 0;
+  width: 40px;
+  z-index: 2;
+}
+input:hover {
+  cursor: pointer;
+}
+.container {
+  display: flex;
+  width: 100%;
   background: black;
+  height: 100px;
+}
+nav {
+  width: 100%;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 1s ease;
 }
 ul {
   width: 100%;
@@ -27,8 +43,15 @@ li::first-letter {
   text-transform: uppercase;
 }
 .burger {
+  /* display: none; */
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+.burger p {
   display: none;
 }
+
 @media screen and (max-width: 690px) {
   nav {
     display: none;
@@ -45,15 +68,50 @@ li::first-letter {
     background: red; */
   }
   .burger p {
+    display: block;
     text-align: center;
     font-weight: bold;
+    border: 1px solid white;
     height: 5px;
     font-size: 2rem;
-    transform: translate(-5px, -15px);
+    /* transform: translate(0px, -20px); */
+    transition: transform 2s ease;
+    color: white;
   }
-  .burger:hover {
+  .burger:hover p {
     cursor: pointer;
     border: 1px solid red;
-    transform: scale(1.1);
+    transform: scale(1.2);
+  }
+  /* .container {
+    display: flex;
+  } */
+  input:checked ~ nav {
+    display: flex;
+    transform: translate(-20px, 120px);
+    width: 200px;
+  }
+  /* .container:hover ul, */
+  input:checked ~ nav ul {
+    /* flex-direction: column; */
+    /* justify-content: start; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    align-items: flex-start;
+    height: 150px;
+    width: 200px;
+    background: black;
+    padding-left: 15px;
+  }
+  /* input:checked ~ p:first-child {
+    transform: translateY(70px);
+  } */
+  input:checked ~ p:nth-child(2) {
+    transform: translate(-2px, 80px) rotate(45deg);
+  }
+  input:checked ~ p:nth-child(3) {
+    transform: translateY(80px) rotate(-45deg);
   }
 }
