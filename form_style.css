@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+}
+.container form {
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  background-color: blueviolet;
+  color: beige;
+  width: 90%;
+  margin: 10px 10px;
+  margin: 2px;
+}
