@@ -20,7 +20,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: grey;
+  /* background: grey; */
+  background: url(./img/salami-2645403_960_720.jpg) center/cover;
 }
 .title {
   display: flex;
@@ -100,6 +101,7 @@ body {
   background: white;
   position: absolute;
   top: -7px;
+  border-radius: 50%;
 }
 h2 {
   padding: 5px;

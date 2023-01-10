@@ -69,7 +69,8 @@ h3 {
 .card img {
   height: var(--hCardImg);
   width: var(--wCardImg);
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  margin-top: 20px;
 }
 .img-details {
   display: flex;
