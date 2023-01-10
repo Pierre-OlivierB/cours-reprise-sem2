@@ -4,6 +4,103 @@
   box-sizing: border-box;
 }
 body {
-  width: 100vh;
+  height: 100vh;
   /* background-color: red; */
+}
+.container {
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  border: 1px solid black;
+  height: 400px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: grey;
+}
+.title {
+  display: flex;
+  height: 20%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  position: relative;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+/* .card-title {
+} */
+.day-recipe {
+  /* width: 20%; */
+  margin-top: 50px;
+  text-align: right;
+}
+.day-recipe span {
+  border: 1px solid black;
+  border-right: 0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 5px;
+  color: hsl(0, 100%, 75%);
+  background: white;
+}
+.heart {
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: -6px;
+  transform: scale(3);
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  color: red;
+}
+.heart::after {
+  content: "\2661";
+}
+.heart:hover::after {
+  cursor: pointer;
+  content: "\2764";
+}
+
+.circle {
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50px;
+  position: absolute;
+  background: grey;
+}
+.circle:nth-last-of-type(2) {
+  top: -20px;
+  left: 149px;
+}
+.circle:last-of-type {
+  top: -20px;
+  left: 79px;
+}
+/* .heart:hover {
+  background-color: blue;
+} */
+.squarre {
+  width: 70px;
+  height: 15px;
+  background: white;
+  position: absolute;
+  top: -7px;
+}
+h2 {
+  padding: 5px;
 }
