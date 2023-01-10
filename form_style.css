@@ -6,14 +6,74 @@
 body {
   height: 100vh;
 }
+/* .container {
+} */
+.contain {
+  display: flex;
+}
+.contain .choices,
+.contain span,
+.contain label {
+  margin: 5px;
+}
 .container form {
+  margin-left: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  height: 300px;
 }
+
 h1 {
-  background-color: blueviolet;
+  background-color: hsl(271, 76%, 35%);
   color: beige;
   width: 90%;
   margin: 10px 10px;
   margin: 2px;
+  padding: 5px;
+}
+.bold label {
+  font-weight: bold;
+}
+input[type="text"] {
+  border-radius: 5px;
+  height: 30px;
+  border: 1px solid hsl(0, 0%, 50%);
+  background: hsl(0, 0%, 95%);
+}
+@media screen and (max-width: 480px) {
+  /* .container form {
+    margin: 0 auto;
+  } */
+  .container form {
+    height: 500px;
+  }
+  .contain {
+    display: flex;
+    flex-direction: column;
+  }
+  .contain input {
+    display: flex;
+    max-width: 200px;
+  }
+  /* label {
+    max-width: 200px;
+  }
+  .bold{
+    input
+  } */
+  .bold .choices {
+    margin-top: 5px;
+    width: 100px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 0.3fr 1fr;
+    grid-gap: 5px;
+  }
+  .choices label,
+  .choices input {
+    width: 15px;
+    /* justify-content: flex-start;
+    align-items: flex-start; */
+  }
 }

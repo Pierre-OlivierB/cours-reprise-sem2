@@ -12,26 +12,49 @@
     <div class="container">
       <h1>Questionnaire de colonie de vacances</h1>
       <form action="" method="get">
-        <label for="name">Votre nom :</label>
-        <input type="text" name="name" id="name" />
-        <label for="town">Voter ville d'origin :</label>
-        <input type="text" name="town" id="town" />
-        <label for="sport">Choisir un sport :</label>
-        <label for="basket">basket</label>
-        <input type="radio" name="sport" id="basket" />
-        <label for="rugby">rugby</label>
-        <input type="radio" name="sport" id="rugby" />
-        <label for="volley">volley</label>
-        <input type="radio" name="sport" id="volley" />
-        <label for="equip">Couleur d'équipe</label>
-        <select name="equip" id="equip">
-          <option value="">-veuillez choisir une option</option>
-          <option value="blue">bleu</option>
-          <option value="red">rouge</option>
-          <option value="yellow">jaune</option>
-          <option value="purple">violet</option>
-          <option value="pink">rose</option>
-        </select>
+        <div class="contain">
+          <label for="name">Votre nom : </label>
+          <input type="text" name="name" id="name" />
+        </div>
+        <div class="contain">
+          <label for="town">Voter ville d'origin : </label>
+          <input type="text" name="town" id="town" />
+        </div>
+        <div class="contain bold">
+          <span>Choisir un sport :</span>
+          <div class="choices">
+            <input type="radio" name="sport" id="basket" />
+            <label for="basket">basket</label>
+            <input type="radio" name="sport" id="rugby" />
+            <label for="rugby">rugby</label>
+            <input type="radio" name="sport" id="volley" />
+            <label for="volley">volley</label>
+          </div>
+        </div>
+        <div class="contain bold">
+          <span>Choisir son activité : </span>
+          <div class="choices">
+            <input type="checkbox" name="fishing" id="fishing" />
+            <label for="">Pêche</label>
+            <input type="checkbox" name="model" id="model" />
+            <label for="">Maquette</label>
+            <input type="checkbox" name="theatre" id="theatre" />
+            <label for="">Théâtre</label>
+            <input type="checkbox" name="movie" id="movie" />
+            <label for="">Cinéma</label>
+          </div>
+        </div>
+        <div class="contain">
+          <label for="equip">Couleur d'équipe :</label>
+          <select name="equip" id="equip">
+            <option value="">-veuillez choisir une option</option>
+            <option value="blue">bleu</option>
+            <option value="red">rouge</option>
+            <option value="yellow">jaune</option>
+            <option value="purple">violet</option>
+            <option value="pink">rose</option>
+          </select>
+        </div>
       </form>
     </div>
   </body>
