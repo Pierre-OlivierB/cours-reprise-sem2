@@ -16,6 +16,7 @@ h2::first-letter {
   text-transform: uppercase;
 }
 .container {
+  position: relative;
   width: 90%;
   height: 400px;
   display: grid;
@@ -32,10 +33,22 @@ h2::first-letter {
   color: white;
   background: grey;
   border: 1px solid transparent;
+  transition: background-color 2s ease;
 }
 /*first case*/
 .content:first-child {
-  background: green;
+  /* background: green; */
+  background-image: linear-gradient(
+    130deg,
+    #79bc41 37.5%,
+    #73b53d 37.5%,
+    #73b53d 50%,
+    #79bc41 50%,
+    #79bc41 87.5%,
+    #73b53d 87.5%,
+    #73b53d 100%
+  );
+  background-size: 15.66px 18.67px;
 }
 .content:first-child button {
   padding: 5px;
@@ -71,4 +84,52 @@ h2::first-letter {
 /*hover*/
 .content:hover {
   border: 1px solid black;
+}
+/*btn network bottom page*/
+.abs-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  bottom: -5px;
+  right: 50px;
+}
+.abs-btn:hover {
+  border: 1px solid green;
+  transform: scale(1.2);
+}
+/*bg*/
+
+.content:nth-child(2) {
+  background: url("https://cdn.greenpeace.fr/site/uploads/2017/02/AGRICULTURE-Theme-1920x1280-550x368.jpg")
+    hsla(0, 0%, 10%, 0.8);
+  /* background-color: rgba(0, 0, 26, 0.8);
+  background-image: url("https://cdn.greenpeace.fr/site/uploads/2017/02/AGRICULTURE-Theme-1920x1280-550x368.jpg"); */
+}
+.content:nth-child(n + 2):hover {
+  background-blend-mode: darken;
+}
+.content:nth-child(3) {
+  background: hsla(0, 0%, 10%, 0.8)
+    url("https://cdn.greenpeace.fr/site/uploads/2017/02/NUCLEAIRE-Theme-1920x1280-550x368.jpg")
+    center/cover;
+}
+.content:nth-child(4) {
+  background: hsla(0, 0%, 10%, 0.8),
+    url("https://cdn.greenpeace.fr/site/uploads/2017/02/CLIMAT-Theme-1920x1280-550x368.jpg")
+      center/cover;
+}
+.content:nth-child(5) {
+  background: hsla(0, 0%, 10%, 0.8)
+    url("https://cdn.greenpeace.fr/site/uploads/2017/02/FORET-Theme-1920x1280-550x368.jpg")
+    center/cover;
+}
+.content:nth-child(6) {
+  background: hsla(0, 0%, 10%, 0.8)
+    url("https://cdn.greenpeace.fr/site/uploads/2017/02/OCEAN-Theme-1920x1280-rSH-550x368.jpg")
+    center/cover;
 }
